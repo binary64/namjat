@@ -4,3 +4,4 @@ _next
 out
 pages/**/*
 !pages/_document.js
+yarn.lock
