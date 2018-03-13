@@ -10,3 +10,5 @@
 Future
 
 * CSS, SASS, SCSS, or LESS?
+* https://dev-blog.apollodata.com/whats-next-for-react-apollo-4d41ba12c2cb
+* Graphcool?
