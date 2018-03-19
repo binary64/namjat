@@ -1,6 +1,7 @@
-node_modules
+node_modules/
 .*/
-_next
-out
-!pages/_document.js
+_next/
+out/
 yarn.lock
+*.log
+package-lock.json
