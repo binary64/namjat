@@ -9,9 +9,6 @@
     "build": "next build && next export"
   },
   "dependencies": {
-    "@types/next": "^2.4.8",
-    "@types/react": "^16.0.40",
-    "@types/react-dom": "^16.0.4",
     "@zeit/next-css": "^0.1.4",
     "@zeit/next-typescript": "^0.0.10",
     "antd": "^3.3.0",
@@ -30,6 +27,10 @@
     "typescript": "^2.7.2"
   },
   "devDependencies": {
+    "@types/next": "^2.4.8",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/graphql": "0.12.5",
     "babel-eslint": "^8.2.2",
     "babel-plugin-import": "^1.6.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
