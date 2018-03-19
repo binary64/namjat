@@ -1,42 +1,28 @@
-import React from "react";
-import gql from "graphql-tag";
-import { graphql } from "react-apollo";
+import gql from 'graphql-tag';
+import React from 'react';
+import { graphql } from 'react-apollo';
+import { withData } from '../lib/next-apollo-hoc'
 
-export const HERO_QUERY = gql`
-  query GetCharacter($episode: Episode!) {
-    hero(episode: $episode) {
-      name
-      id
-      friends {
-        name
-        id
-        appearsIn
-      }
+@withData
+@graphql(gql`
+  query AllUsersQuery {
+    allUsers {
+      firstName
     }
   }
-`;
+`)
+export default class Blah extends React.Component {
+  render() {
+    if (!this.props.data.allUsers) return (
+      <div>Loading!</div>
+    )
+    return (
+      <div>
+        {
+          this.props.data.allUsers.map((e) => (<li>{e.firstName}</li>))
+        }
+      </div>
+    )
+  }
+}
 
-export const withCharacter = graphql(HERO_QUERY, {
-  options: () => ({
-    variables: { episode: "JEDI" },
-  }),
-});
-
-export default withCharacter(({ data: { loading, hero, error } }) => {
-  if (loading) return <div>Loading</div>;
-  if (error) return <h1>ERROR</h1>;
-  return (
-    <div>
-      {hero &&
-        <div>
-          <h3>{hero.name}</h3>
-          {hero.friends.map(friend =>
-            <h6 key={friend.id}>
-              {friend.name}:
-              {" "}{friend.appearsIn.map(x => x.toLowerCase()).join(", ")}
-            </h6>
-          )}
-        </div>}
-    </div>
-  )
-})

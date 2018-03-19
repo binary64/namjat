@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
 import React from 'react';
 import { graphql } from 'react-apollo';
+import Link from 'next'
 import { withData } from '../lib/next-apollo-hoc'
 
 @withData
@@ -18,9 +19,13 @@ export default class Blah extends React.Component {
     )
     return (
       <div>
-        {
-          this.props.data.allUsers.map((e) => (<li>{e.firstName}</li>))
-        }
+        <Link><a href='/'>Index</a></Link>
+        <Link><a href='/about'>About</a></Link>
+        <ul>
+          {
+            this.props.data.allUsers.map((e) => (<li>{e.firstName}</li>))
+          }
+        </ul>
       </div>
     )
   }
