@@ -1,8 +1,8 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "target": "es6",
-        "module": "esnext",
+        "target": "es2015",
+        "module": "commonjs",
         "isolatedModules": false,
         "moduleResolution": "node",
         "jsx": "react",
