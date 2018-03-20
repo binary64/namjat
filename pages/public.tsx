@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { withData } from '../lib/next-apollo-hoc'
-import Container from '../containers/main'
+import { withData } from '../lib/apollo'
+import Container from '../containers/Main'
 
 @withData
 @graphql(gql`
@@ -12,7 +12,7 @@ import Container from '../containers/main'
     }
   }
 `)
-export default class Blah extends React.Component {
+export default class extends React.Component {
   render() {
     if (!this.props.data.allUsers) return (
       <div>Loading!</div>

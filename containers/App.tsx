@@ -6,7 +6,7 @@ import Login from './Login'
 
 const { Header, Footer, Sider, Content } = Layout;
 
-export default class Layout2 extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <Layout style={{ height: '100vh' }}>
@@ -22,11 +22,19 @@ export default class Layout2 extends React.Component {
                     <Link href='/'><a>Home</a></Link>
                   </Menu.Item>
                   <Menu.Item>
-                    <Link href='/about'><a>About</a></Link>
+                    <Link href='/public'><a>Public</a></Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link href='/private'><a>Private</a></Link>
                   </Menu.Item>
                 </Menu>
               </Sider>
               <Content>
+                <style jsx>{`
+                  .ant-layout-content {
+                    padding: 5vmin;
+                  }
+                `}</style>
                 {this.props.children}
               </Content>
             </Layout>
