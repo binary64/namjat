@@ -47,7 +47,7 @@ export default class extends React.Component {
 
 
         {
-          this.props.data.allUsers.map((e, i) => (<li key={i}>{e.firstName}</li>))
+          this.props.data.allUsers.map((e, i) => <li key={i}>{e.firstName}</li>)
         }
 
       </Container>
