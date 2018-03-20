@@ -1,3 +1,11 @@
+# Quickstart
+
+```bash
+git clone https://github.com/binary64/namjat
+cd namjat
+yarn && yarn dev
+```
+
 # namjat
 
 * Next.js - used for Webpack and SSR
