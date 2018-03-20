@@ -42,9 +42,9 @@ export default class extends React.Component {
     )
     return (
       <Container>
-        <Sticky>
+
           <h1>Header wow</h1>
-        </Sticky>
+
 
         {
           this.props.data.allUsers.map((e, i) => (<li key={i}>{e.firstName}</li>))
