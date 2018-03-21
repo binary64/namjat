@@ -36,7 +36,7 @@ export default class extends React.Component {
     )
     return (
       <Container>
-        <Sticky>All users (compile-time)</Sticky>
+        <Sticky><h1>All users (compile-time)</h1></Sticky>
         {
           this.props.data.allUsers.map((e, i) => <li key={i}>{e.firstName}</li>)
         }

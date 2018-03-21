@@ -26,11 +26,11 @@ export default class Sticky extends React.Component {
 
   render() {
     return (
-      <h1 style={{
+      <div style={{
         position: 'sticky',
         top: '-5vmin', //TODO: get dyamically at runtime
         backgroundColor: 'rgb(240, 242, 245)' //TODO: get dyamically at runtime
-      }}>{this.props.children}</h1>
+      }}>{this.props.children}</div>
 
       // <div style={{ display: 'flex', flexDirection: 'column', margin: 0 }}>
       //   <div ref='master' style={{ width: '100%' }}>

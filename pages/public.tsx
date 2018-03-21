@@ -20,7 +20,7 @@ export default class extends React.Component {
     )
     return (
       <Container>
-        <Sticky>GQL at compile-time</Sticky>
+        <Sticky><h1>GQL at compile-time</h1></Sticky>
         There are {this.props.data.allUsers.length} users in the database.
       </Container>
     )
