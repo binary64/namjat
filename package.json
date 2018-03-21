@@ -20,13 +20,9 @@
     "next-apollo-hoc": "^1.0.0",
     "next-cookies": "^1.0.2",
     "nextjs-export-path-map": "^0.1.2",
-    "primereact": "^1.5.0",
     "react": "^16.2.0",
     "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
-    "react-sticky": "^6.0.1",
-    "react-sticky-el": "^1.0.16",
-    "react-sticky-plus": "^1.0.3",
     "typescript": "^2.7.2"
   },
   "devDependencies": {
