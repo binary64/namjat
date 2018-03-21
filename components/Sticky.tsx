@@ -26,14 +26,20 @@ export default class Sticky extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', margin: 0 }}>
-        <div ref='master' style={{ width: '100%' }}>
-          <h1>{this.props.title}</h1>
-        </div>
-        <div style={{ flex: 1, overflowX: 'scroll', width: '100%' }}>
-          {this.props.children}
-        </div>
-      </div>
+      <h1 style={{
+        position: 'sticky',
+        top: '-5vmin', //TODO: get dyamically at runtime
+        backgroundColor: 'rgb(240, 242, 245)' //TODO: get dyamically at runtime
+      }}>{this.props.children}</h1>
+
+      // <div style={{ display: 'flex', flexDirection: 'column', margin: 0 }}>
+      //   <div ref='master' style={{ width: '100%' }}>
+      //     <h1>{this.props.title}</h1>
+      //   </div>
+      //   <div style={{ flex: 1, overflowX: 'scroll', width: '100%' }}>
+      //     {this.props.children}
+      //   </div>
+      // </div>
     )
   }
 }

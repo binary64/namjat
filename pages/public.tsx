@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { withData } from '../lib/apollo'
 import Container from '../containers/Main'
+import Sticky from '../components/Sticky'
 
 @withData
 @graphql(gql`
@@ -19,8 +20,8 @@ export default class extends React.Component {
     )
     return (
       <Container>
+        <Sticky>GQL at compile-time</Sticky>
         There are {this.props.data.allUsers.length} users in the database.
-
       </Container>
     )
   }

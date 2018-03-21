@@ -9,6 +9,7 @@ import { Layout, Menu, Icon, Button } from 'antd'
 //import { StickyContainer, Sticky } from 'react-sticky-plus'
 //import Sticky from 'react-sticky-el';
 import Widget from '../components/Widget'
+import Sticky from '../components/Sticky'
 
 const { Header, Footer, Sider, Content } = Layout
 
@@ -29,35 +30,18 @@ type Props = {
 };
 
 @withData
-@graphql(gql`
-  query AllUsersQuery {
-    allUsers {
-      firstName
-    }
-  }
-`)
 export default class extends React.Component {
   render() {
-    if (!this.props.data.allUsers) return (
-      <div>Loading!</div>
-    )
     return (
       <Container>
-        <h1 style={{
-          position: 'sticky',
-          top: '-5vmin',
-          backgroundColor: 'rgb(240, 242, 245)'
-        }}> Header </h1>
+        <Sticky>Dynamic widgets (runtime)</Sticky>
         Your name is: <Widget gql={`
-          query GetMyself {
-            user(id:1) {
-              firstName
+          query {
+            _allUsersMeta {
+              count
             }
           }
-        `} dataKey='user' />
-        {
-          this.props.data.allUsers.map((e, i) => <li key={i}>{e.firstName}</li>)
-        }
+        `} widget="widget1" dataKey1='_allUsersMeta' dataKey2='count' />
       </Container>
     )
   }

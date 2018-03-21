@@ -3,6 +3,7 @@ import * as React from 'react';
 import { graphql } from 'react-apollo';
 import { withData } from '../lib/apollo'
 import Container from '../containers/Main'
+import Sticky from '../components/Sticky'
 
 type User = {
   lastName: string
@@ -24,7 +25,7 @@ type Props = {
 @graphql(gql`
   query AllUsersQuery {
     allUsers {
-      lastName
+      firstName
     }
   }
 `)
@@ -35,7 +36,10 @@ export default class extends React.Component {
     )
     return (
       <Container>
-        Private stuff here
+        <Sticky>All users (compile-time)</Sticky>
+        {
+          this.props.data.allUsers.map((e, i) => <li key={i}>{e.firstName}</li>)
+        }
       </Container>
     )
   }
