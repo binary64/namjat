@@ -24,7 +24,7 @@ type Props = {
 @withData
 @graphql(gql`
   query AllUsersQuery {
-    allUsers {
+    allUsers(first: 15) {
       firstName
     }
   }
