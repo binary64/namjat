@@ -17,6 +17,18 @@ export default class App extends React.Component {
             </Header>
             <Layout style={{ flex: '1' }}>
               <Sider>
+                <style global jsx>{`
+                  .ant-layout-content {
+                    padding: 5vmin;
+                  }
+                  .ant-layout-sider {
+                    flex: 0 0 18vw !important;
+                    max-width: 400px !important;
+                    min-width: 80px !important;
+                    min-width: auto !important;
+                    width: 200px !important;
+                  }
+                `}</style>
                 <Menu>
                   <Menu.Item>
                     <Link href='/'><a>Home</a></Link>
@@ -33,6 +45,12 @@ export default class App extends React.Component {
                 <style jsx>{`
                   .ant-layout-content {
                     padding: 5vmin;
+                  }
+                  .ant-layout-sider {
+                    flex: 0 0 18vw;
+                    max-width: 400px;
+                    min-width: 50px;
+                    width: 200px;
                   }
                 `}</style>
                 {this.props.children}
