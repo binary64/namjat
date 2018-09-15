@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+import { Button } from 'antd';
 
 const POSTS_PER_PAGE = 10
 

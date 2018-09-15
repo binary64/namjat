@@ -39,6 +39,9 @@ export default class App extends React.Component {
                   <Menu.Item>
                     <Link href='/private'><a>Private</a></Link>
                   </Menu.Item>
+                  <Menu.Item>
+                    <Link href='/bi'><a>BI</a></Link>
+                  </Menu.Item>
                 </Menu>
               </Sider>
               <Content>

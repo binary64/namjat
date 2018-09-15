@@ -1,7 +1,7 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-import { withData } from '../lib/apollo'
+import withData from '../lib/apollo'
 import Container from '../containers/Main'
 import Sticky from '../components/Sticky'
 

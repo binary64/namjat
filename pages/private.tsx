@@ -1,25 +1,25 @@
 import gql from 'graphql-tag';
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { withData } from '../lib/apollo'
+import withData from '../lib/apollo'
 import Container from '../containers/Main'
 import Sticky from '../components/Sticky'
 
-type User = {
-  lastName: string
-}
-type Post = {
-  noIdea: string
-}
-type Props = {
-  data: {
-    allUsers: Array<User>,
-    allPosts: Array<Post>,
-    _allPostsMeta: { count: number },
-    loading: boolean
-  },
-  loadMorePosts: () => void
-};
+// interface User {
+//   lastName: string
+// };
+// interface Post {
+//   noIdea: string
+// };
+// interface Props {
+//   data: {
+//     allUsers: Array<User>,
+//     allPosts: Array<Post>,
+//     _allPostsMeta: { count: number },
+//     loading: boolean
+//   },
+//   loadMorePosts: () => void
+// };
 
 @withData
 @graphql(gql`
